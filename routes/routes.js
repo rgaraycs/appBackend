@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const helloWorld = require('R:\Program Files (x86)\Notepad++\backend')
+const helloWorld = require('../backend/helloWorld')
 
-router.post('/path', (request, response) =>{
+router.post('/create', (request, response) =>{
 	const helloWorlder = new helloWorld({
 		ID:request.body.ID,
 		Info:Request.body.Info
@@ -15,8 +15,11 @@ router.post('/path', (request, response) =>{
 		response.json(error)
 	})
 		
-	}
-}
+	})
+	
+router.get('/helloworld', (request, response) =>{
+	response.send('Hello World!')
+})
 
 module.exports = router
 

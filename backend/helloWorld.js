@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const helloWorld = new mongoose.Schema({
 	ID:{
-		type:Int,
+		type:String,
 		required: true
 	},
 	Info:{
